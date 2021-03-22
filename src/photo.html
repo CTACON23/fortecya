@@ -10,7 +10,7 @@
     <title>Стара фортеця</title>
   </head>
   <body>
-    <header class="shadow">
+    <header>
       <div class="logo">
         <a href="/">
           <img src="./assets/img/logo.png"/>
@@ -28,13 +28,13 @@
             <a href="">Інформація</a>
             <ul class="submenu">
               <li>
-                <a href="">Проживання</a>
+                <a href="/living.html">Проживання</a>
               </li>
               <li>
-                <a href="">Проїзд</a>
+                <a href="/road.html">Проїзд</a>
               </li>
               <li>
-                <a href="">Правила</a>
+                <a href="/rules.html">Правила</a>
               </li>
             </ul>
           </li>
@@ -62,6 +62,60 @@
           Придбати квиток
         </a>
       </div>
+      <div class="mobile_menu">
+        <a class="mobile_menu-triger" href="#"></a>
+        <div class="mobile_container" style="display: none;"></div>
+        <div class="mobile_menu-popup" style="display: none;">
+            <a class="mobile_menu-close" href="#"></a>
+            <div class="mobile_menu-item-nav">
+              <ul>
+                <li>
+                  <a href="/">Головна</a>
+                </li>
+                <li>
+                  <a href="/news.html">Новини</a>
+                </li>
+                <li class="sub">
+                  <a href="">Інформація</a>
+                  <ul class="submenu">
+                    <li>
+                      <a href="/living.html">Проживання</a>
+                    </li>
+                    <li>
+                      <a href="/road.html">Проїзд</a>
+                    </li>
+                    <li>
+                      <a href="/rules.html">Правила</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="/photo.html">
+                    Фото
+                  </a>
+                </li>
+                <li class="sub">
+                  <a href="">Торгівля</a>
+                  <ul class="submenu">
+                    
+                    <li>
+                      <a href="">Фудкорти</a>
+                    </li>
+                    <li>
+                      <a href="">Вироби</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="ticket">
+              <a href="">
+                Придбати квиток
+              </a>
+            </div>
+        </div>
+
+    </div>
     </header>
     <main class="section_container news photo">
         <div class="enter_text">
@@ -74,39 +128,114 @@
         </div>
         <div class="content">
             <p>Найкращі бійці з історичного фехтування, запеклі рицарські бої, лучники, гармати, ковалі, костюмовані вистави, середньовічна кухня та музика, ярмарок народних промислів.</p>
-            <div class="galery">
-                <div class="item">
-                    <a data-fancybox="images" href="./assets/img/p.png">
+            <div class="galery grid">
+                <div class="grid-sizer"></div>
+                <div class="item grid-item ">
+                  <a data-fancybox="images" href="./assets/img/photos/1.png">
                        <div class="overlay">
                          <img src="./assets/img/zoom_button.png" alt="">
                        </div>
-                       <img src="./assets/img/p.png" alt="">
-                     </a>
+                       <img src="./assets/img/photos/1.png" alt="">
+                  </a>
                 </div>
-                <div class="item">
-                <a data-fancybox="images" href="./assets/img/p.png">
+                <div class="item  grid-item grid-item--height2">
+                  <a data-fancybox="images" href="./assets/img/photos/2.png">
                     <div class="overlay">
                         <img src="./assets/img/zoom_button.png" alt="">
                     </div>
-                    <img src="./assets/img/p.png" alt="">
-                    </a>
+                    <img src="./assets/img/photos/2.png" alt="">
+                  </a>
                 </div>
-                <div class="item">
-                    <a data-fancybox="images" href="./assets/img/p.png">
+                <div class="item  grid-item grid-item--height3">
+                  
+                  <a data-fancybox="images" href="./assets/img/photos/3.png">
+                  <div class="overlay">
+                      <img src="./assets/img/zoom_button.png" alt="">
+                  </div>
+                  <img src="./assets/img/photos/3.png" alt="">
+                  </a>
+                </div>
+                <div class="item  grid-item grid-item--height4">
+                    <a data-fancybox="images" href="./assets/img/photos/4.png">
                     <div class="overlay">
                         <img src="./assets/img/zoom_button.png" alt="">
                     </div>
-                    <img src="./assets/img/p.png" alt="">
+                    <img src="./assets/img/photos/4.png" alt="">
                     </a>
                 </div>
-                <div class="item">
-                    <a data-fancybox="images" href="./assets/img/p.png">
-                    <div class="overlay">
-                        <img src="./assets/img/zoom_button.png" alt="">
-                    </div>
-                    <img src="./assets/img/p.png" alt="">
-                    </a>
+                <div class="item  grid-item ">
+                  
+                  <a data-fancybox="images" href="./assets/img/photos/5.png">
+                  <div class="overlay">
+                      <img src="./assets/img/zoom_button.png" alt="">
+                  </div>
+                  <img src="./assets/img/photos/5.png" alt="">
+                  </a>
                 </div>
+                <div class="item  grid-item grid-item--height5">
+                  
+                  <a data-fancybox="images" href="./assets/img/photos/6.png">
+                  <div class="overlay">
+                      <img src="./assets/img/zoom_button.png" alt="">
+                  </div>
+                  <img src="./assets/img/photos/6.png" alt="">
+                  </a>
+                </div>
+                <div class="item  grid-item grid-item--height4">
+                  
+                  <a data-fancybox="images" href="./assets/img/photos/7.png">
+                  <div class="overlay">
+                      <img src="./assets/img/zoom_button.png" alt="">
+                  </div>
+                  <img src="./assets/img/photos/7.png" alt="">
+                  </a>
+                </div>
+                <div class="item  grid-item grid-item--height6">
+                  
+                  <a data-fancybox="images" href="./assets/img/photos/8.png">
+                  <div class="overlay">
+                      <img src="./assets/img/zoom_button.png" alt="">
+                  </div>
+                  <img src="./assets/img/photos/8.png" alt="">
+                  </a>
+                </div>
+                <div class="item  grid-item grid-item--height5">
+                  
+                  <a data-fancybox="images" href="./assets/img/photos/9.png">
+                  <div class="overlay">
+                      <img src="./assets/img/zoom_button.png" alt="">
+                  </div>
+                  <img src="./assets/img/photos/9.png" alt="">
+                  </a>
+                </div>
+                <div class="item  grid-item">
+                  
+                  <a data-fancybox="images" href="./assets/img/photos/10.png">
+                  <div class="overlay">
+                      <img src="./assets/img/zoom_button.png" alt="">
+                  </div>
+                  <img src="./assets/img/photos/10.png" alt="">
+                  </a>
+                </div>
+                <div class="item  grid-item grid-item--height4">
+                  
+                  <a data-fancybox="images" href="./assets/img/photos/11.png">
+                  <div class="overlay">
+                      <img src="./assets/img/zoom_button.png" alt="">
+                  </div>
+                  <img src="./assets/img/photos/11.png" alt="">
+                  </a>
+                </div>
+                <div class="item  grid-item grid-item--height7">
+                  
+                  <a data-fancybox="images" href="./assets/img/photos/12.png">
+                  <div class="overlay">
+                      <img src="./assets/img/zoom_button.png" alt="">
+                  </div>
+                  <img src="./assets/img/photos/12.png" alt="">
+                  </a>
+                </div>
+                
             </div>
         </div>
     </main>
@@ -151,6 +280,5 @@
         </div>
     </footer>
     
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </body>
 </html>

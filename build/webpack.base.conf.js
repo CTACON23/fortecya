@@ -6,7 +6,7 @@ const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { VueLoaderPlugin } = require('vue-loader')
+var webpack = require('webpack');
 
 // Main const
 const PATHS = {
@@ -28,16 +28,15 @@ module.exports = {
   },
   entry: {
     app: PATHS.src
-    // module: `${PATHS.src}/your-module.js`,
   },
   output: {
     filename: `${PATHS.assets}js/[name].[contenthash].js`,
     path: PATHS.dist,
+    publicPath:'/'
     /*
       publicPath: '/' - relative path for dist folder (js,css etc)
       publicPath: './' (dot before /) - absolute path for dist folder (js,css etc)
     */
-    publicPath: '/'
   },
   optimization: {
     splitChunks: {
@@ -60,21 +59,12 @@ module.exports = {
         exclude: '/node_modules/'
       },
       {
-        // Vue
-        test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-          loader: {
-            scss: 'vue-style-loader!css-loader!sass-loader'
-          }
-        }
-      },
-      {
         // Fonts
         test: /\.(woff(2)?|ttf|otf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]'
+          name: '[name].[ext]',
+          
         }
       },
       {
@@ -82,7 +72,10 @@ module.exports = {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]'
+          name: '[name].[ext]',
+          // context: path.resolve(__dirname, "src/"),
+          outputPath: `assets/img/`,
+          // publicPath: '../',
         }
       },
       {
@@ -133,12 +126,9 @@ module.exports = {
     alias: {
       '~': PATHS.src, // Example: import Dog from "~/assets/img/dog.jpg"
       '@': `${PATHS.src}/js`, // Example: import Sort from "@/utils/sort.js"
-      vue$: 'vue/dist/vue.js'
     }
   },
   plugins: [
-    // Vue loader
-    new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].[contenthash].css`
     }),
@@ -161,6 +151,13 @@ module.exports = {
         }
       ]
     }),
+    new webpack.ProvidePlugin({
+      
+      IScroll: `${PATHS.src}/js/scrolloverflow.min.js`,
+      $: 'jquery',
+      jQuery: 'jquery',
+      fullpage: `${PATHS.src}/js/fullpage.js`
+    }),
 
     /*
       Automatic creation any html pages (Don't forget to RERUN dev server!)
@@ -173,7 +170,8 @@ module.exports = {
       page =>
         new HtmlWebpackPlugin({
           template: `${PAGES_DIR}/${page}`,
-          filename: `./${page}`
+          filename: `./${page}`,
+          
         })
     )
   ]

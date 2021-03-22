@@ -1,6 +1,7 @@
 // JS
-
+import './js/jquery-3.6.0.min'
 import './js/jquery.fancybox.min.js'
+import './js/masonry.pkgd.min.js'
 import './js/app.js'
 
 
